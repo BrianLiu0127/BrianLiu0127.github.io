@@ -1,22 +1,52 @@
 <!-- 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 -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8"/>
-    <title>記帳</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
-    <div class="container">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>記帳</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="part-1">
       <div class="box title">記帳app</div>
-      <div class="Date-box">日期<span class="box" style="margin-left: 5px;"><input type="date"/></span></div>
+      <div class="Date-box">
+        <div style="flex:1; color:white;">日期</div>
+        <div style="flex:3; color:white;" class="box"><input type="date" style="flex: 4;"/></div>
+      </div>
       <div class="container-in-out">
-        <div></div>
-        <div class="circle box"><div>收入</div></div>
-        <div class="circle box"><div>支出</div></div>
-        <div></div>
+        <div class="circle box">
+          <div>收入</div>
+        </div>
+        <div class="circle box">
+          <div>支出</div>
+        </div>
       </div>
     </div>
-  </body>
+    <div class="part-1" style="width:fit-content;">
+      <div class="expenses-type">
+        <div class="row">
+          <div class="circle box small-circle"><div>吃</div></div>
+          <div class="circle box small-circle"><div>吃</div></div>
+          <div class="circle box small-circle"><div>吃</div></div>
+          <div class="circle box small-circle"><div>吃</div></div>
+          <div class="circle box small-circle"><div>吃</div></div>
+        </div>
+        <div class="row" style="margin-left: 20px">
+          <div class="circle box small-circle"><div>吃</div></div>
+          <div class="circle box small-circle"><div>吃</div></div>
+          <div class="circle box small-circle"><div>吃</div></div>
+          <div class="circle box small-circle"><div>吃</div></div>
+          <div class="circle box small-circle"><div>吃</div></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="part-1">part-3</div>
+  </div>
+</body>
+
 </html>
