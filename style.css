@@ -14,13 +14,13 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* align-items: center; */
+    align-content: center;
     /* justify-content: space-between; */
 }
 
 .part-1{
     width:300px;
-    height:max-content;
+    height:290px;
     color: white;
     /* border:1px solid white; */
     display: flex;
@@ -30,7 +30,7 @@ body{
 }
 
 .box{
-    border: 2px solid #AF36C3;
+    border: 2px solid #af36c3;
     /* border-image: linear-gradient(135deg,#AF36C3,#2E2EBF) 1; */
     border-radius: 2px;
 }
@@ -60,7 +60,7 @@ body{
     justify-content: center;
 }
 
-[type="date"]{
+[type]{
     color: white;
     background-color: #171721;
     height: inherit;
@@ -108,7 +108,7 @@ body{
 
 .row{
     /* border: 1px solid white; */
-    width:inherit;
+    /* width:fit-content; */
     height:max-content;
     display:flex;
     justify-content: space-between;
@@ -118,4 +118,18 @@ body{
     width: 55px;
     height: 55px;
     margin: 5px;
+}
+
+.money{
+    border: 2px solid #c9ab3e;
+    margin:5px
+}
+
+.input-text{
+    width: 100px; padding: 10px; margin:10px;
+}
+
+.btn{
+    margin-top:40px;
+    /* background-color: #171721; */
 }

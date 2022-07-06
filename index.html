@@ -1,4 +1,4 @@
-<!-- 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 -->
+<!-- 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 -->
 <!DOCTYPE html>
 <html>
 
@@ -15,7 +15,7 @@
       <div class="box title">記帳app</div>
       <div class="Date-box">
         <div style="flex:1; color:white;">日期</div>
-        <div style="flex:3; color:white;" class="box"><input type="date" style="flex: 4;"/></div>
+        <div style="flex:3; color:white;" class="box"><input type="date" style="flex: 4;" /></div>
       </div>
       <div class="container-in-out">
         <div class="circle box">
@@ -26,27 +26,66 @@
         </div>
       </div>
     </div>
-    <div class="part-1" style="width:fit-content;">
+
+    <div class="part-1" style="width:fit-content; flex-direction: column;">
       <div class="expenses-type">
-        <div class="row">
-          <div class="circle box small-circle"><div>吃</div></div>
-          <div class="circle box small-circle"><div>吃</div></div>
-          <div class="circle box small-circle"><div>吃</div></div>
-          <div class="circle box small-circle"><div>吃</div></div>
-          <div class="circle box small-circle"><div>吃</div></div>
+        <div class="row" style="padding-right: 20px">
+          <div class="circle box small-circle">
+            <div>吃的</div>
+          </div>
+          <div class="circle box small-circle">
+            <div>喝的</div>
+          </div>
+          <div class="circle box small-circle">
+            <div>文具</div>
+          </div>
+          <div class="circle box small-circle">
+            <div>書籍</div>
+          </div>
+          <div class="circle box small-circle">
+            <div>玩樂</div>
+          </div>
         </div>
-        <div class="row" style="margin-left: 20px">
-          <div class="circle box small-circle"><div>吃</div></div>
-          <div class="circle box small-circle"><div>吃</div></div>
-          <div class="circle box small-circle"><div>吃</div></div>
-          <div class="circle box small-circle"><div>吃</div></div>
-          <div class="circle box small-circle"><div>吃</div></div>
+        <div class="row" style="padding-left: 20px">
+          <div class="circle box small-circle">
+            <div>醫藥</div>
+          </div>
+          <div class="circle box small-circle">
+            <div>生活</div>
+          </div>
+          <div class="circle box small-circle">
+            <div>交通</div>
+          </div>
+          <div class="circle box small-circle">
+            <div>儲值</div>
+          </div>
+          <div class="circle box small-circle">
+            <div>其他</div>
+          </div>
         </div>
       </div>
 
+      <div class="row">
+        <div class="circle box money">現金</div>
+        <div class="circle box money">Line<br>Pay</div>
+        <div class="circle box money">悠遊卡</div>
+      </div>
     </div>
-    <div class="part-1">part-3</div>
+
+    <div class="part-1" style="margin-top:20px; height: 60px;">
+      <div class="row">
+        <div class="box input-text">
+          <input type="text" style="font-size: 40px; width: 100px;" placeholder="名稱"/>
+        </div>
+        <div class="box input-text">
+          <input type="text" inputmode="numeric" style="font-size: 40px; width: 100px;" placeholder="金額"/>
+        </div>
+      </div>
+
+      <button class="box btn">送出</button>
+    </div>
   </div>
+
 </body>
 
 </html>
