@@ -19,8 +19,9 @@ body{
 
 .part-1{
     width:300px;
-    height:290px;
+    height:fit-content;
     color: white;
+    padding: 10px;
     /* border:1px solid white; */
     display: flex;
     flex-wrap: wrap;
@@ -59,7 +60,7 @@ body{
     justify-content: center;
 }
 
-[type]{
+[type="text"], [type="date"]{
     color: white;
     background-color: #171721;
     height: inherit;
@@ -72,7 +73,8 @@ body{
     /* border: 1px solid white; */
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    align-content: center;
+    /* margin-bottom: 20px; */
 }
 
 .circle{
@@ -116,7 +118,7 @@ body{
 .small-circle{
     width: 55px;
     height: 55px;
-    margin: 5px;
+    margin: 0px 5px 5px 0px;
 }
 
 .money{
@@ -125,12 +127,14 @@ body{
 }
 
 .input-text{
-    width: 100px; padding: 10px; margin:10px;
+    width: 100px;
+    /* padding: 10px; */
+    margin-bottom:10px;
 }
 
 .btn{
     color: white;
-    margin-top:40px;
+    margin-top:20px;
     background-color: #171721;
     margin-bottom: 100px;
 }

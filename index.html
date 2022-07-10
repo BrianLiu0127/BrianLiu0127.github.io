@@ -72,19 +72,26 @@
       </div>
     </div>
 
-    <div class="part-1" style="margin-top:20px; height: 60px;">
-      <div class="row">
-        <div class="box input-text">
-          <input type="text" style="font-size: 40px; width: 100px;" placeholder="名稱"/>
-        </div>
-        <div class="box input-text">
-          <input type="text" inputmode="numeric" style="font-size: 40px; width: 100px;" placeholder="金額"/>
-        </div>
+    <div class="part-1">
+      <div >
+        <!-- <div class="box input-text"> -->
+          <fieldset class="box input-text">
+            <legend>金額</legend>
+            <input type="text" inputmode="numeric" style="font-size: 20px; text-align: left;"/>
+          </fieldset>
+          <fieldset class="box input-text">
+            <legend>備註</legend>
+            <input type="text" style="font-size: 20px; text-align: left;"/>
+          </fieldset>
+        <!-- </div> -->
+        <!-- <div class="box input-text">
+          <input type="text" inputmode="numeric" style="font-size: 40px;" placeholder="金額"/>
+        </div> -->
       </div>
 
-      <div style="height: 100px;">
-        <button type="submit" class="box btn" style="background-color: #171721;">送出</button>
-      </div>
+      <!-- <div  class="box circle btn"> -->
+        <button type="submit" class="circle box btn">送出</button>
+      <!-- </div> -->
     </div>
   </div>
 
