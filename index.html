@@ -18,57 +18,57 @@
         <div style="flex:3; color:white;" class="box"><input type="date" style="flex: 4;" /></div>
       </div>
       <div class="container-in-out">
-        <div class="circle box">
+        <div class="circle box" id="income" onclick="handle_income(1)">
           <div>收入</div>
         </div>
-        <div class="circle box">
+        <div class="circle box" id="expense" onclick="handle_expense(1)">
           <div>支出</div>
         </div>
       </div>
     </div>
 
-    <div class="part-1" style="width:fit-content; flex-direction: column;">
-      <div class="expenses-type">
+    <div class="part-1" style="width:fit-content; flex-direction: column; justify-content:flex-start;">
+      <div class="expenses-type" id="expenses-type">
         <div class="row" style="padding-right: 20px">
-          <div class="circle box small-circle">
+          <div class="circle box small-circle" id="list1" onclick="handle_list(0)">
             <div>吃的</div>
           </div>
-          <div class="circle box small-circle">
+          <div class="circle box small-circle" id="list2" onclick="handle_list(1)">
             <div>喝的</div>
           </div>
-          <div class="circle box small-circle">
+          <div class="circle box small-circle" id="list3" onclick="handle_list(2)">
             <div>文具</div>
           </div>
-          <div class="circle box small-circle">
+          <div class="circle box small-circle" id="list4" onclick="handle_list(3)">
             <div>書籍</div>
           </div>
-          <div class="circle box small-circle">
+          <div class="circle box small-circle" id="list5" onclick="handle_list(4)">
             <div>玩樂</div>
           </div>
         </div>
         <div class="row" style="padding-left: 20px">
-          <div class="circle box small-circle">
+          <div class="circle box small-circle" id="list6" onclick="handle_list(5)">
             <div>醫藥</div>
           </div>
-          <div class="circle box small-circle">
+          <div class="circle box small-circle" id="list7" onclick="handle_list(6)">
             <div>生活</div>
           </div>
-          <div class="circle box small-circle">
+          <div class="circle box small-circle" id="list8" onclick="handle_list(7)">
             <div>交通</div>
           </div>
-          <div class="circle box small-circle">
+          <div class="circle box small-circle" id="list9" onclick="handle_list(8)">
             <div>儲值</div>
           </div>
-          <div class="circle box small-circle">
+          <div class="circle box small-circle" id="list10" onclick="handle_list(9)">
             <div>其他</div>
           </div>
         </div>
       </div>
 
       <div class="row">
-        <div class="circle box money">現金</div>
-        <div class="circle box money">Line<br>Pay</div>
-        <div class="circle box money">悠遊卡</div>
+        <div class="circle box money" id="cash" onclick="handle_money(0)">現金</div>
+        <div class="circle box money" id="linepay" onclick="handle_money(1)">Line<br>Pay</div>
+        <div class="circle box money" id="easy-card" onclick="handle_money(2)">悠遊卡</div>
       </div>
     </div>
 
@@ -83,11 +83,12 @@
       </div>
 
       <div style="height: 100px;">
-        <button class="box btn" style="background-color: #171721;">送出</button>
+        <button type="submit" class="box btn" style="background-color: #171721;">送出</button>
       </div>
     </div>
   </div>
 
+  <script src="script.js"></script>
 </body>
 
 </html>

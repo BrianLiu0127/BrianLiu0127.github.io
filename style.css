@@ -31,7 +31,7 @@ body{
 .box{
     border: 2px solid #af36c3;
     /* border-image: linear-gradient(135deg,#AF36C3,#2E2EBF) 1; */
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
 .title{
@@ -86,11 +86,11 @@ body{
     justify-content: center;
 }
 
-.circle:hover{
+.circle:hover, button:hover{
     box-shadow: 0px 0px 4px 2px white;
 }
 
-.circle:active{
+.circle:active, button:active{
     position:relative;
     top:4px;
     box-shadow: none;
@@ -101,7 +101,7 @@ body{
     width:fit-content;
     height: fit-content;
     margin-bottom: 20px;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
