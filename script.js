@@ -4,6 +4,13 @@ var money_type="";
 var money="";
 var comment="";
 
+var currentDate = new Date();
+var inputDate = document.getElementById("inputDate");
+var dd = currentDate.getFullYear() + "-";
+dd += (parseInt(currentDate.getMonth()) < 9)? "0":""; 
+dd += (parseInt(currentDate.getMonth())+1) + "-" + currentDate.getDate();
+inputDate.value = dd;
+
 function handle_income(choose){
     var income = document.getElementById("income");
     if (choose) {
@@ -84,19 +91,13 @@ function handle_money(choose) {
 }
 
 function submit(){
-    var currentDate = new Date();
-    var inputDate = document.getElementById("inputDate");
-    if (inputDate.value == "") {
-        date = currentDate.getFullYear() + "-" + (parseInt(currentDate.getMonth())+1) + "-" + currentDate.getDate();
-    }else {
-        date = inputDate.value;
-    }
+    date = inputDate.value;
     var amount = document.getElementById("amount");
     var remark = document.getElementById("remark");
     money = amount.value;
     comment = remark.value;
 
-    if (date=="" || in_out=="" || money_type=="" || money=="" || comment=="") {
+    if (date=="" || in_out=="" || money_type=="" || money=="") {
         alert("請完成輸入再送出!!");
         console.log("Date: " + date);
         console.log("in_out:" + in_out);
