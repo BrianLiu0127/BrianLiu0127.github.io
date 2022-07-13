@@ -51,7 +51,7 @@ body{
     /* border: 1px solid white; */
     color:white;
     font-size: 20px;
-    margin: 40px;
+    margin: 20px 40px 40px 40px;
     width:226px;
     text-align: center;
     height: max-content;
@@ -137,4 +137,10 @@ body{
     margin-top:20px;
     background-color: #171721;
     margin-bottom: 100px;
+}
+
+.google-login{
+    position: fixed ;
+    top: 0px;
+    right: 0px;
 }

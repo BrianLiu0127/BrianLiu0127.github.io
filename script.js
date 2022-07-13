@@ -8,7 +8,9 @@ var currentDate = new Date();
 var inputDate = document.getElementById("inputDate");
 var dd = currentDate.getFullYear() + "-";
 dd += (parseInt(currentDate.getMonth()) < 9)? "0":""; 
-dd += (parseInt(currentDate.getMonth())+1) + "-" + currentDate.getDate();
+dd += (parseInt(currentDate.getMonth())+1) + "-";
+dd += (currentDate.getDate() < 10)? "0":"";
+dd += currentDate.getDate();
 inputDate.value = dd;
 
 function handle_income(choose){
@@ -99,23 +101,31 @@ function submit(){
 
     if (date=="" || in_out=="" || money_type=="" || money=="") {
         alert("請完成輸入再送出!!");
-        console.log("Date: " + date);
-        console.log("in_out:" + in_out);
-        console.log("money_type:" + money_type);
-        console.log("money:" + money);
-        console.log("comment:" + comment);
+        console.log("時間: " + date);
+        console.log("種類: " + in_out);
+        console.log("方式: " + money_type);
+        console.log("金額: " + money);
+        console.log("備註: " + comment);
         return;
     }
-    alert("Date: " + date
-    + "\nin_out:" + in_out
-    + "\nmoney_type:" + money_type
-    + "\nmoney:" + money
-    + "\ncomment:" + comment);
+    alert("時間: " + date
+    + "\n種類:" + in_out
+    + "\n方式:" + money_type
+    + "\n金額:" + money
+    + "\n備註:" + comment);
     // console.log(date);
     // console.log(in_out);
     // console.log(money_type);
     // console.log(money);
     // console.log(comment);
+    var rowData = {
+        date: date.value,
+        type: in_out.value,
+        way: money_type.value,
+        amount: money.value,
+        remark: comment
+    }
+    google.script.run.addData(rowData);
     reset();
 }
 
@@ -132,3 +142,11 @@ function reset(){
     amount.value = "";
     remark.value = "";
 }
+
+function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  }

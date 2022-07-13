@@ -11,6 +11,25 @@
 </head>
 
 <body>
+  <script src="https://accounts.google.com/gsi/client"></script>
+  <!-- onload="console.log('TODO: add onload function')" -->
+
+  <div id="g_id_onload"
+    data-client_id="998634205524-soab23jd7bgaaqpn37dbnjvkk39nvmer.apps.googleusercontent.com"
+    data-login_uri="https://your.domain/your_login_endpoint"
+    async defer>
+    <!-- data-auto_prompt="false" -->
+  </div>
+  <div class="g_id_signin google-login"
+    data-type="standard"
+    data-size="small"
+    data-theme="filled_black"
+    data-text="sign_in_with"
+    data-shape="rectangular"
+    data-logo_alignment="left"
+    data-onsuccess="onSignIn">
+  </div>
+
   <div class="container">
     <div class="part-1">
       <div class="box title">記帳app</div>
@@ -94,15 +113,6 @@
 
   </div>
   <script src="script.js"></script>
-  <script src="https://accounts.google.com/gsi/client" onload="console.log('TODO: add onload function')">
-
-  </script>
-  <div id="g_id_onload" data-client_id="998634205524-soab23jd7bgaaqpn37dbnjvkk39nvmer.apps.googleusercontent.com" data-login_uri="https://your.domain/your_login_endpoint"
-    data-auto_prompt="false">
-  </div>
-  <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline" data-text="sign_in_with"
-    data-shape="rectangular" data-logo_alignment="left">
-  </div>
 </body>
 
 </html>
