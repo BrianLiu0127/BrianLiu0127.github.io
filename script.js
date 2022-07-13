@@ -125,7 +125,7 @@ function submit(){
         amount: money.value,
         remark: comment
     }
-    google.script.run.addData(rowData);
+    // google.script.run.addData(rowData);
     reset();
 }
 
