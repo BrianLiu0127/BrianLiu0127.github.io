@@ -13,10 +13,9 @@
   <script src="https://accounts.google.com/gsi/client"></script>
   <!-- onload="console.log('TODO: add onload function')" -->
 
-  <div id="g_id_onload"
+  <!-- <div id="g_id_onload"
     data-client_id="998634205524-soab23jd7bgaaqpn37dbnjvkk39nvmer.apps.googleusercontent.com"
     data-login-uri="https://brianliu0127.github.io"
-    async defer
     data-auto_prompt="false">
   </div>
   <div class="g_id_signin google-login"
@@ -25,9 +24,25 @@
     data-theme="filled_black"
     data-text="sign_in_with"
     data-shape="rectangular"
-    data-logo_alignment="left">
-    <!-- data-onsuccess="onSignIn"> -->
-  </div>
+    data-logo_alignment="left"
+    data-onsuccess="onSignIn">
+  </div> -->
+
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+      <div id="g_id_onload"
+         data-client_id="998634205524-soab23jd7bgaaqpn37dbnjvkk39nvmer.apps.googleusercontent.com"
+         data-ux_mode="popup"
+         data-auto_prompt="true"
+         data-callback="onSignIn">
+      </div>
+      <div class="g_id_signin"
+         data-type="standard"
+         data-size="large"
+         data-theme="filled_black"
+         data-text="sign_in_with"
+         data-shape="rectangular"
+         data-logo_alignment="left">
+      </div>
 
   <div class="container">
     <div class="part-1">
@@ -111,6 +126,7 @@
     </div>
 
   </div>
+  <script src="jwt-decode.js"></script>
   <script src="script.js"></script>
 </body>
 

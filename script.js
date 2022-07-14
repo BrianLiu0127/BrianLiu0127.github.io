@@ -143,11 +143,42 @@ function reset(){
     remark.value = "";
 }
 
-function onSignIn(googleUser) {
-    console.log('00000000000000000000');
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-  }
+
+function onSignIn(response) {
+    console.log('00000000000000000004');
+    const responsePayload = jwt_decode(response.credential);
+  
+    console.log("ID: " + responsePayload.sub);
+    console.log('Full Name: ' + responsePayload.name);
+    console.log('Given Name: ' + responsePayload.given_name);
+    console.log('Family Name: ' + responsePayload.family_name);
+    console.log("Image URL: " + responsePayload.picture);
+    console.log("Email: " + responsePayload.email);
+ }
+    // var profile = googleUser.getBasicProfile();
+    // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    // console.log('Name: ' + profile.getName());
+    // console.log('Image URL: ' + profile.getImageUrl());
+    // console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+
+
+// window.onload = function () {
+//     google.accounts.id.initialize({
+//       client_id: '998634205524-soab23jd7bgaaqpn37dbnjvkk39nvmer.apps.googleusercontent.com',
+//       callback: handleCredentialResponse
+//     });
+//     google.accounts.id.prompt();
+// }
+
+// function handleCredentialResponse(response) {
+//     // decodeJwtResponse() is a custom function defined by you
+//     // to decode the credential response.
+//     const responsePayload = decodeJwtResponse(response.credential);
+
+//     console.log("ID: " + responsePayload.sub);
+//     console.log('Full Name: ' + responsePayload.name);
+//     console.log('Given Name: ' + responsePayload.given_name);
+//     console.log('Family Name: ' + responsePayload.family_name);
+//     console.log("Image URL: " + responsePayload.picture);
+//     console.log("Email: " + responsePayload.email);
+// }
